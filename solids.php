@@ -1,7 +1,7 @@
 <?php 
 /**
- * Plugin Name: Author Bio
- * Description: A plugin for posting author bio for every post
+ * Plugin Name: Solid SEO
+ * Description: A ranking plugin for SEO
  * Plugin URI: http://sajuahmed.epizy.com/
  * Author: Riyadh Ahmed
  * Author URI: http://sajuahmed.epizy.com/
@@ -83,3 +83,9 @@ function solids_author_bio($content)
     return $content . $bio_content;
 }
 add_filter('the_content', 'solids_author_bio');
+
+function solids_enqueue_scripts() {
+
+wp_enqueue_style ('solids-style', plugins_url('/style.css', __FILE__ ) );
+}
+add_action( 'wp_enqueue_scripts', 'solids_enqueue_scripts');
