@@ -1,7 +1,7 @@
 <?php 
 /**
- * Plugin Name: Solid SEO
- * Description: A ranking plugin for SEO
+ * Plugin Name: Author Bio
+ * Description: A plugin that show author bio every below the post 
  * Plugin URI: http://sajuahmed.epizy.com/
  * Author: Riyadh Ahmed
  * Author URI: http://sajuahmed.epizy.com/
