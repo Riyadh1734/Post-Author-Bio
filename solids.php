@@ -34,7 +34,7 @@ add_action( 'wp_head','solids_seo_tags');
 function solids_seo_tags_footer(){
     echo "<h1> Hello liker </h1> ";
 }
-//add_action('wp_footer','rtags_footer',999);
+//add_action('wp_footer','solids_seo_tags_footer',999);
 
 function solids_author_bio($content)
 {
@@ -42,7 +42,7 @@ function solids_author_bio($content)
 
     $author = get_user_by('id', $post->post_author);
 
-    error_log( print_r( $author, 1 ) );
+    
 
     $bio      = get_user_meta( $author->ID, 'description', true );
     $twitter  = get_user_meta( $author->ID, 'twitter', true );
