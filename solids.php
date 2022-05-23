@@ -42,10 +42,12 @@ function solids_author_bio($content)
 
     $author = get_user_by('id', $post->post_author);
 
+    error_log( print_r( $author, 1 ) );
+
     $bio      = get_user_meta( $author->ID, 'description', true );
     $twitter  = get_user_meta( $author->ID, 'twitter', true );
     $facebook = get_user_meta( $author->ID, 'facebook', true );
-    $linkedin = get_user_meta( $author->ID, 'linkedin', true );
+    $github   = get_user_meta( $author->ID, 'github', true );
 
     ob_start();
     ?>
@@ -71,8 +73,8 @@ function solids_author_bio($content)
                     <li><a href="<?php echo esc_url( $facebook ); ?>"><?php _e( 'Facebook', 'solids' ); ?></a></li>
                 <?php } ?>
 
-                <?php if ( $linkedin ) { ?>
-                    <li><a href="<?php echo esc_url( $linkedin ); ?>"><?php _e( 'LinkedIn', 'solids' ); ?></a></li>
+                <?php if ( $github ) { ?>
+                    <li><a href="<?php echo esc_url( $github ); ?>"><?php _e( 'Github', 'solids' ); ?></a></li>
                 <?php } ?>
             </ul>
         </div>
