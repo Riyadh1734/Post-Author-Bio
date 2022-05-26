@@ -89,5 +89,6 @@ add_filter('the_content', 'solids_author_bio');
 function solids_enqueue_scripts() {
 
 wp_enqueue_style ('solids-style', plugins_url('/style.css', __FILE__ ) );
+
 }
 add_action( 'wp_enqueue_scripts', 'solids_enqueue_scripts');
